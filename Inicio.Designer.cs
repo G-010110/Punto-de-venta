@@ -1,6 +1,6 @@
 ﻿namespace CAJA
 {
-    partial class LOGIN1
+    partial class Inicio
     {
         /// <summary>
         /// Required designer variable.
@@ -42,11 +42,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 175);
+            this.label1.Font = new System.Drawing.Font("Perpetua Titling MT", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(46, 159);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(323, 36);
+            this.label1.Size = new System.Drawing.Size(299, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "¡HOLA BIENVENIDO!";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -55,7 +55,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(112, 335);
+            this.label2.Location = new System.Drawing.Point(93, 320);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(175, 26);
@@ -66,8 +66,8 @@
             // 
             this.btnIngresar.BackColor = System.Drawing.Color.SteelBlue;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(117, 445);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIngresar.Location = new System.Drawing.Point(111, 415);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(2);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(164, 37);
             this.btnIngresar.TabIndex = 4;
@@ -79,7 +79,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(112, 246);
+            this.label3.Location = new System.Drawing.Point(91, 225);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 26);
@@ -88,8 +88,9 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(109, 283);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(96, 253);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(194, 39);
@@ -98,8 +99,8 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(109, 378);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Location = new System.Drawing.Point(96, 348);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(194, 39);
@@ -109,20 +110,20 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CAJA.Properties.Resources.Captura_de_pantalla_2026_03_17_225445;
-            this.pictureBox1.Location = new System.Drawing.Point(128, 29);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(117, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(158, 128);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // LOGIN1
+            // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.ClientSize = new System.Drawing.Size(430, 535);
+            this.BackColor = System.Drawing.Color.SlateBlue;
+            this.ClientSize = new System.Drawing.Size(397, 510);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label3);
@@ -130,9 +131,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "LOGIN1";
-            this.Text = "Form2";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "Inicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Inicio de sesión";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

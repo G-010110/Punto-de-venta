@@ -16,7 +16,7 @@ namespace CAJA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LOGIN1());
+            Application.Run(new Inicio());
         }
     }
 }

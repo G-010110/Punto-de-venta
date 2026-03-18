@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CAJA
 {
-    public partial class LOGIN1 : Form
+    public partial class Inicio : Form
     {
-        public LOGIN1()
+        public Inicio()
         {
             InitializeComponent();
         }

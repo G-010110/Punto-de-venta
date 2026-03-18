@@ -58,7 +58,6 @@ C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\System.Text.En
 C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.csproj.Up2Date
 C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.exe
 C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.pdb
-C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\obj\Debug\CAJA.LOGIN1.resources
 C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\obj\Debug\CAJA.Form1.resources
 C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\bin\Debug\itext.barcodes.dll
 C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\bin\Debug\itext.bouncy-castle-connector.dll
@@ -138,3 +137,4 @@ C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CA
 C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\bin\Debug\Microsoft.Bcl.HashCode.xml
 C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\bin\Debug\RBush.xml
 C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\bin\Debug\SixLabors.Fonts.xml
+C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\obj\Debug\CAJA.Inicio.resources
