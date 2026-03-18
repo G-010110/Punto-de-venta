@@ -2,7 +2,6 @@ C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CA
 C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\bin\Debug\CAJA.exe
 C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\bin\Debug\CAJA.pdb
 C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\obj\Debug\CAJA.csproj.AssemblyReference.cache
-C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\obj\Debug\CAJA.Form1.resources
 C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\obj\Debug\CAJA.Properties.Resources.resources
 C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\obj\Debug\CAJA.csproj.GenerateResource.cache
 C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\obj\Debug\CAJA.csproj.CoreCompileInputs.cache
@@ -28,3 +27,36 @@ C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CA
 C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\obj\Debug\CAJA.csproj.SuggestedBindingRedirects.cache
 C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\obj\Debug\CAJA.exe.config
 C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\obj\Debug\CAJA.ListaEsperaV.resources
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.csproj.AssemblyReference.cache
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.csproj.SuggestedBindingRedirects.cache
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.exe.config
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.Form2.resources
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.ListaEsperaV.resources
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.LOGIN1.resources
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.Properties.Resources.resources
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.csproj.GenerateResource.cache
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.csproj.CoreCompileInputs.cache
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\CAJA.exe.config
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\CAJA.exe
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\CAJA.pdb
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\ExcelDataReader.dll
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\System.Buffers.dll
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\System.Memory.dll
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\ExcelDataReader.pdb
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\ExcelDataReader.xml
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\System.Buffers.xml
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\System.Memory.xml
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\System.Text.Encoding.CodePages.xml
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.csproj.Up2Date
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.exe
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.pdb
+C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\obj\Debug\CAJA.LOGIN1.resources
+C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\obj\Debug\CAJA.Form1.resources

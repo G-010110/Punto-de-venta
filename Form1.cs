@@ -142,8 +142,11 @@ namespace CAJA
             busqueda=txtBusqueda.Text;
             txtCant.Text = 1+"";
             System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
-
-            using (var stream = File.Open("C:\\Users\\010110\\Desktop\\SEMESTRE 4\\Topicos avanzados de programacion\\Unidad 2\\CAJA\\BaseDatos\\DB_INVENTARIO_PRODUCTOS.xlsx", FileMode.Open, FileAccess.Read))
+            string rutaBaseP = Path.Combine(Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName,
+            "BaseDatos",
+            "DB_INVENTARIO_PRODUCTOS.xlsx"
+);
+            using (var stream = File.Open(rutaBaseP, FileMode.Open, FileAccess.Read))
             {
                 using (var reader = ExcelReaderFactory.CreateReader(stream))
                 {
