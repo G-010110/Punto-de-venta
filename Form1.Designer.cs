@@ -202,7 +202,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 12);
+            this.label1.Location = new System.Drawing.Point(21, 13);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(238, 29);
@@ -297,9 +297,9 @@
             this.label4.Location = new System.Drawing.Point(21, 26);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(659, 31);
+            this.label4.Size = new System.Drawing.Size(316, 31);
             this.label4.TabIndex = 0;
-            this.label4.Text = "PUNTO DE VENTA, Yo carmen lo he modificaado";
+            this.label4.Text = "PUNTO DE VENTA 2.0";
             // 
             // listView1
             // 
