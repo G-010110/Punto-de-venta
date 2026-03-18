@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace CAJA
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
         //Atributos de la caja 
         string id, descricion, pU, cant, unidad, importees;
@@ -26,7 +26,7 @@ namespace CAJA
             le.Show();
         }
 
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
         }

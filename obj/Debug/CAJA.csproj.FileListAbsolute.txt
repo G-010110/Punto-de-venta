@@ -28,6 +28,15 @@ C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CA
 C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\obj\Debug\CAJA.csproj.SuggestedBindingRedirects.cache
 C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\obj\Debug\CAJA.exe.config
 C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\obj\Debug\CAJA.ListaEsperaV.resources
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.csproj.AssemblyReference.cache
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.csproj.SuggestedBindingRedirects.cache
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.exe.config
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.Form2.resources
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.ListaEsperaV.resources
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.LOGIN1.resources
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.Properties.Resources.resources
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.csproj.GenerateResource.cache
+C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.csproj.CoreCompileInputs.cache
 C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\CAJA.exe.config
 C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\CAJA.exe
 C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\CAJA.pdb
@@ -47,14 +56,6 @@ C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\System.Memory.
 C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\bin\Debug\System.Text.Encoding.CodePages.xml
-C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.csproj.AssemblyReference.cache
-C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.csproj.SuggestedBindingRedirects.cache
-C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.exe.config
-C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.Form1.resources
-C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.ListaEsperaV.resources
-C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.Properties.Resources.resources
-C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.csproj.GenerateResource.cache
-C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.csproj.CoreCompileInputs.cache
 C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.csproj.Up2Date
 C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.exe
 C:\Users\--LENOVO--\Desktop\ProyectosGit\Punto-de-venta\obj\Debug\CAJA.pdb

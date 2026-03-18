@@ -1,6 +1,6 @@
 ﻿namespace CAJA
 {
-    partial class Form1
+    partial class Form2
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -319,6 +319,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1285, 554);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.panel2);
