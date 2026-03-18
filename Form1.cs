@@ -1,8 +1,13 @@
 ﻿using ExcelDataReader;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.Layout.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -107,6 +112,86 @@ namespace CAJA
                 importees = (precio * cantidad).ToString();
             }
         }
+        int contador = 1;
+        private void btnCobrar_Click(object sender, EventArgs e)
+        {
+            string rutaBaseP = Path.Combine(
+    Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName,
+    "LOGS");
+            string ruta = rutaBaseP + "\\Ticket" + contador + ".pdf";
+            contador++;
+
+            PdfWriter writer = new PdfWriter(ruta);
+            PdfDocument pdf = new PdfDocument(writer);
+
+            // Tamaño tipo ticket
+            Document document = new Document(pdf, new iText.Kernel.Geom.PageSize(200, 400));
+            document.SetMargins(10, 10, 10, 10);
+
+            // 🏪 Encabezado
+            document.Add(new Paragraph("TIENDA DEL BIENESTAR")
+                .SetTextAlignment(TextAlignment.CENTER).SetFontSize(12));
+            document.Add(new Paragraph("RFC: YYY010101YYY")
+                .SetTextAlignment(TextAlignment.CENTER).SetFontSize(8));
+            document.Add(new Paragraph("TAMAZUNCHALE, SLP. CARRETERA TAMAZUNCHALE-SAN MARTIN")
+                .SetTextAlignment(TextAlignment.CENTER).SetFontSize(8));
+
+            document.Add(new Paragraph("---------------------------------------------"));
+
+            // 📅 Fecha y hora
+            document.Add(new Paragraph(DateTime.Now.ToString("dd/MM/yyyy HH:mm"))
+                .SetTextAlignment(TextAlignment.CENTER).SetFontSize(8));
+
+            document.Add(new Paragraph("---------------------------------------------"));
+
+            // 🛒 Tabla de productos
+            Table table = new Table(3).SetWidth(UnitValue.CreatePercentValue(100));
+            table.AddCell(new Paragraph("Prod").SetFontSize(8));
+            table.AddCell(new Paragraph("Cant").SetFontSize(8));
+            table.AddCell(new Paragraph("Precio").SetFontSize(8));
+
+            double total = 0;
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                string producto = row.Cells[1].Value.ToString();
+                int cantidad = Convert.ToInt32(row.Cells[3].Value);
+                double precio = Convert.ToDouble(row.Cells[2].Value);
+
+                double subtotal = cantidad * precio;
+                total += subtotal;
+
+                table.AddCell(new Paragraph(producto).SetFontSize(8));
+                table.AddCell(new Paragraph(cantidad.ToString()).SetFontSize(8));
+                table.AddCell(new Paragraph(subtotal.ToString("0.00")).SetFontSize(8));
+            }
+
+            document.Add(table);
+
+            document.Add(new Paragraph("---------------------------------------------"));
+
+            // 💰 Total
+            document.Add(new Paragraph($"TOTAL: {total:0.00}")
+                .SetTextAlignment(TextAlignment.RIGHT).SetFontSize(10));
+
+            document.Add(new Paragraph("---------------------------------------------"));
+
+            // 🙏 Mensaje final
+            document.Add(new Paragraph("¡GRACIAS POR SU COMPRA!")
+                .SetTextAlignment(TextAlignment.CENTER).SetFontSize(10));
+
+            document.Close();
+            dataGridView1.Rows.Clear();
+            MessageBox.Show("Ticket generado");
+
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = ruta,
+                UseShellExecute = true
+            });
+        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -115,25 +200,31 @@ namespace CAJA
 
         private void btnAgregarp_Click(object sender, EventArgs e)
         {
-            importees = ((float.Parse(pU)) * (float.Parse(cant))) + "";
-            if (!string.IsNullOrEmpty(id) && !string.IsNullOrEmpty(descricion))
+            try
             {
-                sesionactual.Add(new Registro
+                importees = ((float.Parse(pU)) * (float.Parse(cant))) + "";
+                if (!string.IsNullOrEmpty(id) && !string.IsNullOrEmpty(descricion))
                 {
-                    Id = id,
-                    Nombre = descricion,
-                    pUnitarioo = pU,
-                    Cantidaaad = cant,
-                    un = unidad,
-                    Importee = importees
-                });
-                CalcularTotal();
+                    sesionactual.Add(new Registro
+                    {
+                        Id = id,
+                        Nombre = descricion,
+                        pUnitarioo = pU,
+                        Cantidaaad = cant,
+                        un = unidad,
+                        Importee = importees
+                    });
+                    CalcularTotal();
+                }
+                else
+                {
+                    MessageBox.Show("Primero busca un producto válido antes de agregar.");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Primero busca un producto válido antes de agregar.");
+                MessageBox.Show("Por favor ingresa datos...", "Advertencia");
             }
-
         }
         string busqueda;
         //C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\BaseDatos\DB_INVENTARIO_PRODUCTOS.xlsx
@@ -144,8 +235,8 @@ namespace CAJA
             System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
             string rutaBaseP = Path.Combine(Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName,
             "BaseDatos",
-            "DB_INVENTARIO_PRODUCTOS.xlsx"
-);
+            "DB_INVENTARIO_PRODUCTOS.xlsx");
+
             using (var stream = File.Open(rutaBaseP, FileMode.Open, FileAccess.Read))
             {
                 using (var reader = ExcelReaderFactory.CreateReader(stream))
