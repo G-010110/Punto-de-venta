@@ -193,6 +193,16 @@ namespace CAJA
             });
         }
 
+        private void txtTotal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            CalcularTotal();
+        }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 

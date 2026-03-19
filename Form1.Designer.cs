@@ -42,15 +42,15 @@
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidadMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.importeTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.importeTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidadMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -59,29 +59,26 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.txtTotal);
-            this.panel1.Controls.Add(this.btnCobrar);
             this.panel1.Controls.Add(this.txtUni);
             this.panel1.Controls.Add(this.btnAgregarp);
             this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.txtTotal);
             this.panel1.Controls.Add(this.txtCant);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtDescr);
             this.panel1.Controls.Add(this.idProducto);
             this.panel1.Controls.Add(this.txtBusqueda);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(12, 98);
+            this.panel1.Location = new System.Drawing.Point(5, 430);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(765, 340);
+            this.panel1.Size = new System.Drawing.Size(996, 105);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button2.Location = new System.Drawing.Point(492, 279);
+            this.button2.Location = new System.Drawing.Point(487, 386);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 38);
             this.button2.TabIndex = 16;
@@ -93,16 +90,17 @@
             // 
             this.txtTotal.AutoSize = true;
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(50, 279);
+            this.txtTotal.Location = new System.Drawing.Point(767, 80);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(51, 16);
             this.txtTotal.TabIndex = 15;
             this.txtTotal.Text = "Total: ";
+            this.txtTotal.Click += new System.EventHandler(this.txtTotal_Click);
             // 
             // btnCobrar
             // 
             this.btnCobrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCobrar.Location = new System.Drawing.Point(642, 279);
+            this.btnCobrar.Location = new System.Drawing.Point(634, 386);
             this.btnCobrar.Name = "btnCobrar";
             this.btnCobrar.Size = new System.Drawing.Size(110, 38);
             this.btnCobrar.TabIndex = 12;
@@ -114,7 +112,7 @@
             // 
             this.txtUni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.txtUni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUni.Location = new System.Drawing.Point(551, 33);
+            this.txtUni.Location = new System.Drawing.Point(369, 74);
             this.txtUni.Name = "txtUni";
             this.txtUni.Size = new System.Drawing.Size(104, 26);
             this.txtUni.TabIndex = 11;
@@ -122,7 +120,7 @@
             // btnAgregarp
             // 
             this.btnAgregarp.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnAgregarp.Location = new System.Drawing.Point(661, 33);
+            this.btnAgregarp.Location = new System.Drawing.Point(372, 32);
             this.btnAgregarp.Name = "btnAgregarp";
             this.btnAgregarp.Size = new System.Drawing.Size(101, 30);
             this.btnAgregarp.TabIndex = 10;
@@ -152,7 +150,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(355, 44);
+            this.label2.Location = new System.Drawing.Point(5, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 7;
@@ -162,9 +160,9 @@
             // 
             this.txtDescr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.txtDescr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescr.Location = new System.Drawing.Point(427, 34);
+            this.txtDescr.Location = new System.Drawing.Point(77, 74);
             this.txtDescr.Name = "txtDescr";
-            this.txtDescr.Size = new System.Drawing.Size(104, 26);
+            this.txtDescr.Size = new System.Drawing.Size(270, 26);
             this.txtDescr.TabIndex = 6;
             // 
             // idProducto
@@ -206,74 +204,13 @@
             this.cantidadProducto,
             this.unidadMedida,
             this.importeTotal});
-            this.dataGridView1.Location = new System.Drawing.Point(1, 93);
+            this.dataGridView1.Location = new System.Drawing.Point(5, 141);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(760, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(799, 239);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // clave
-            // 
-            this.clave.DataPropertyName = "Id";
-            this.clave.HeaderText = "SKU";
-            this.clave.MinimumWidth = 6;
-            this.clave.Name = "clave";
-            this.clave.ReadOnly = true;
-            this.clave.Width = 130;
-            // 
-            // nombreProducto
-            // 
-            this.nombreProducto.DataPropertyName = "Nombre";
-            this.nombreProducto.HeaderText = "Descripción";
-            this.nombreProducto.MinimumWidth = 6;
-            this.nombreProducto.Name = "nombreProducto";
-            this.nombreProducto.ReadOnly = true;
-            this.nombreProducto.Width = 130;
-            // 
-            // pUnitario
-            // 
-            this.pUnitario.DataPropertyName = "pUnitarioo";
-            this.pUnitario.HeaderText = "P. Unitario";
-            this.pUnitario.MinimumWidth = 6;
-            this.pUnitario.Name = "pUnitario";
-            this.pUnitario.ReadOnly = true;
-            this.pUnitario.Width = 130;
-            // 
-            // cantidadProducto
-            // 
-            this.cantidadProducto.DataPropertyName = "Cantidaaad";
-            this.cantidadProducto.HeaderText = "Cantidad";
-            this.cantidadProducto.MinimumWidth = 6;
-            this.cantidadProducto.Name = "cantidadProducto";
-            this.cantidadProducto.ReadOnly = true;
-            this.cantidadProducto.Width = 125;
-            // 
-            // unidadMedida
-            // 
-            this.unidadMedida.DataPropertyName = "un";
-            this.unidadMedida.HeaderText = "Unidad";
-            this.unidadMedida.MinimumWidth = 6;
-            this.unidadMedida.Name = "unidadMedida";
-            this.unidadMedida.ReadOnly = true;
-            this.unidadMedida.Width = 130;
-            // 
-            // importeTotal
-            // 
-            this.importeTotal.DataPropertyName = "Importee";
-            this.importeTotal.HeaderText = "Importe";
-            this.importeTotal.MinimumWidth = 6;
-            this.importeTotal.Name = "importeTotal";
-            this.importeTotal.ReadOnly = true;
-            this.importeTotal.Width = 125;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(12, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(763, 80);
-            this.panel2.TabIndex = 1;
+            this.dataGridView1.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView1_RowsRemoved);
             // 
             // label4
             // 
@@ -290,23 +227,90 @@
             this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(780, 11);
+            this.listView1.Location = new System.Drawing.Point(810, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(182, 405);
+            this.listView1.Size = new System.Drawing.Size(191, 405);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.List;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Location = new System.Drawing.Point(5, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(799, 80);
+            this.panel2.TabIndex = 1;
+            // 
+            // importeTotal
+            // 
+            this.importeTotal.DataPropertyName = "Importee";
+            this.importeTotal.HeaderText = "Importe";
+            this.importeTotal.MinimumWidth = 6;
+            this.importeTotal.Name = "importeTotal";
+            this.importeTotal.ReadOnly = true;
+            this.importeTotal.Width = 125;
+            // 
+            // unidadMedida
+            // 
+            this.unidadMedida.DataPropertyName = "un";
+            this.unidadMedida.HeaderText = "Unidad";
+            this.unidadMedida.MinimumWidth = 6;
+            this.unidadMedida.Name = "unidadMedida";
+            this.unidadMedida.ReadOnly = true;
+            this.unidadMedida.Width = 130;
+            // 
+            // cantidadProducto
+            // 
+            this.cantidadProducto.DataPropertyName = "Cantidaaad";
+            this.cantidadProducto.HeaderText = "Cantidad";
+            this.cantidadProducto.MinimumWidth = 6;
+            this.cantidadProducto.Name = "cantidadProducto";
+            this.cantidadProducto.ReadOnly = true;
+            this.cantidadProducto.Width = 125;
+            // 
+            // pUnitario
+            // 
+            this.pUnitario.DataPropertyName = "pUnitarioo";
+            this.pUnitario.HeaderText = "P. Unitario";
+            this.pUnitario.MinimumWidth = 6;
+            this.pUnitario.Name = "pUnitario";
+            this.pUnitario.ReadOnly = true;
+            this.pUnitario.Width = 130;
+            // 
+            // nombreProducto
+            // 
+            this.nombreProducto.DataPropertyName = "Nombre";
+            this.nombreProducto.HeaderText = "Descripción";
+            this.nombreProducto.MinimumWidth = 6;
+            this.nombreProducto.Name = "nombreProducto";
+            this.nombreProducto.ReadOnly = true;
+            this.nombreProducto.Width = 130;
+            // 
+            // clave
+            // 
+            this.clave.DataPropertyName = "Id";
+            this.clave.HeaderText = "SKU";
+            this.clave.MinimumWidth = 6;
+            this.clave.Name = "clave";
+            this.clave.ReadOnly = true;
+            this.clave.Width = 130;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(964, 450);
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(1004, 537);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.listView1);
+            this.Controls.Add(this.btnCobrar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -322,7 +326,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAgregarp;
@@ -334,16 +337,17 @@
         private System.Windows.Forms.TextBox txtUni;
         private System.Windows.Forms.Button btnCobrar;
         public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label txtTotal;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridViewTextBoxColumn clave;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn pUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn unidadMedida;
         private System.Windows.Forms.DataGridViewTextBoxColumn importeTotal;
-        private System.Windows.Forms.Label txtTotal;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label4;
     }
 }
 
