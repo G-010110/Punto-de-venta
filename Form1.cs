@@ -44,15 +44,16 @@ namespace CAJA
             listView1.Items.Add("Sesion1");
             dataGridView1.DataSource = sesionactual;
         }
+        public float pasarTotal = 0;
         void CalcularTotal()
         {
             float total = 0;
-
+           
             foreach (Registro r in sesionactual)
             {
                 total += float.Parse(r.Importee);
             }
-
+            pasarTotal = total;
             txtTotal.Text = "Total: $ " + total.ToString("0.00");
         }
         private void button2_Click(object sender, EventArgs e)
@@ -70,18 +71,6 @@ namespace CAJA
                 dataGridView1.DataSource = sesionactual;
                 CalcularTotal();
             }
-        }
-
-        public void generarTicket()
-        {
-            float total = 0;
-
-            foreach (Registro r in sesionactual)
-            {
-                total += float.Parse(r.Importee);
-            }
-
-            txtTotal.Text = "Total: $ " + total.ToString("0.00");
         }
         private void button2_Click_1(object sender, EventArgs e)
         {
@@ -112,87 +101,15 @@ namespace CAJA
                 importees = (precio * cantidad).ToString();
             }
         }
-        int contador = 1;
+        public int contador = 1;
+        
         private void btnCobrar_Click(object sender, EventArgs e)
         {
-            string rutaBaseP = Path.Combine(
-    Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName,
-    "LOGS");
-            string ruta = rutaBaseP + "\\Ticket" + contador + ".pdf";
-            contador++;
-
-            PdfWriter writer = new PdfWriter(ruta);
-            PdfDocument pdf = new PdfDocument(writer);
-
-            // Tamaño tipo ticket
-            Document document = new Document(pdf, new iText.Kernel.Geom.PageSize(200, 400));
-            document.SetMargins(10, 10, 10, 10);
-
-            // 🏪 Encabezado
-            document.Add(new Paragraph("TIENDA DEL BIENESTAR")
-                .SetTextAlignment(TextAlignment.CENTER).SetFontSize(12));
-            document.Add(new Paragraph("RFC: YYY010101YYY")
-                .SetTextAlignment(TextAlignment.CENTER).SetFontSize(8));
-            document.Add(new Paragraph("TAMAZUNCHALE, SLP. CARRETERA TAMAZUNCHALE-SAN MARTIN")
-                .SetTextAlignment(TextAlignment.CENTER).SetFontSize(8));
-
-            document.Add(new Paragraph("---------------------------------------------"));
-
-            // 📅 Fecha y hora
-            document.Add(new Paragraph(DateTime.Now.ToString("dd/MM/yyyy HH:mm"))
-                .SetTextAlignment(TextAlignment.CENTER).SetFontSize(8));
-
-            document.Add(new Paragraph("---------------------------------------------"));
-
-            // 🛒 Tabla de productos
-            Table table = new Table(3).SetWidth(UnitValue.CreatePercentValue(100));
-            table.AddCell(new Paragraph("Prod").SetFontSize(8));
-            table.AddCell(new Paragraph("Cant").SetFontSize(8));
-            table.AddCell(new Paragraph("Precio").SetFontSize(8));
-
-            double total = 0;
-
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                if (row.IsNewRow) continue;
-
-                string producto = row.Cells[1].Value.ToString();
-                int cantidad = Convert.ToInt32(row.Cells[3].Value);
-                double precio = Convert.ToDouble(row.Cells[2].Value);
-
-                double subtotal = cantidad * precio;
-                total += subtotal;
-
-                table.AddCell(new Paragraph(producto).SetFontSize(8));
-                table.AddCell(new Paragraph(cantidad.ToString()).SetFontSize(8));
-                table.AddCell(new Paragraph(subtotal.ToString("0.00")).SetFontSize(8));
-            }
-
-            document.Add(table);
-
-            document.Add(new Paragraph("---------------------------------------------"));
-
-            // 💰 Total
-            document.Add(new Paragraph($"TOTAL: {total:0.00}")
-                .SetTextAlignment(TextAlignment.RIGHT).SetFontSize(10));
-
-            document.Add(new Paragraph("---------------------------------------------"));
-
-            // 🙏 Mensaje final
-            document.Add(new Paragraph("¡GRACIAS POR SU COMPRA!")
-                .SetTextAlignment(TextAlignment.CENTER).SetFontSize(10));
-
-            document.Close();
-            dataGridView1.Rows.Clear();
-            MessageBox.Show("Ticket generado");
-
-            Process.Start(new ProcessStartInfo
-            {
-                FileName = ruta,
-                UseShellExecute = true
-            });
+            MPago mp = new MPago(this);
+           
+            mp.Show();
         }
-
+        
         private void txtTotal_Click(object sender, EventArgs e)
         {
 
@@ -201,6 +118,12 @@ namespace CAJA
         private void dataGridView1_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
             CalcularTotal();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            txtTotal.Text = "$0.00";
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
