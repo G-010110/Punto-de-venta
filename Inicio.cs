@@ -27,11 +27,12 @@ namespace CAJA
             string usuarioCorrecto = "admin";
             string passwordCorrecto = "1234";
             string usuarioCorrecto2 = "usuario";
+            string usuarioCorrecto3 = "visitante";
 
             if (txtUsuario.Text == "admin" && txtPassword.Text == "1234")
             {    
                 this.Hide();
-                VentanaAdmin vm = new VentanaAdmin();
+                MenuAdmin vm = new MenuAdmin();
                 vm.FormClosed += (s, args) => this.Show(); 
                 vm.Show();
             }
@@ -41,6 +42,15 @@ namespace CAJA
                 Form1 fm = new Form1();
                 
                 fm.FormClosed += (s, args) => this.Show(); 
+                fm.Show();
+
+            }
+            if (txtUsuario.Text == "visitante" && txtPassword.Text == "1234")
+            {
+                this.Hide();
+                Visitantee fm = new Visitantee();
+/////////////
+                fm.FormClosed += (s, args) => this.Show();
                 fm.Show();
 
             }

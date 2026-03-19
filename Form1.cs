@@ -131,6 +131,47 @@ namespace CAJA
 
         }
 
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            GenerarCorteCaja();
+        }
+        void GenerarCorteCaja()
+        {
+            float totalGeneral = 0;
+            int totalVentas = sesiones.Count;
+            int totalProductos = 0;
+
+            foreach (var sesion in sesiones)
+            {
+                foreach (Registro r in sesion.Value)
+                {
+                    totalGeneral += float.Parse(r.Importee);
+                    totalProductos += int.Parse(r.Cantidaaad);
+                }
+            }
+
+            MessageBox.Show(
+                "CORTE DE CAJA\n\n" +
+                "Ventas: " + totalVentas + "\n" +
+                "Productos vendidos: " + totalProductos + "\n" +
+                "Total: $" + totalGeneral.ToString("0.00")
+            );
+        }
+
+        void GenerarPDF(string contenido)
+        {
+            string ruta = "CorteCaja_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".pdf";
+
+            PdfWriter writer = new PdfWriter(ruta);
+            PdfDocument pdf = new PdfDocument(writer);
+            Document doc = new Document(pdf);
+
+            doc.Add(new Paragraph(contenido));
+
+            doc.Close();
+
+            MessageBox.Show("PDF generado en: " + ruta);
+        }
         private void btnAgregarp_Click(object sender, EventArgs e)
         {
             try
@@ -145,7 +186,8 @@ namespace CAJA
                         pUnitarioo = pU,
                         Cantidaaad = cant,
                         un = unidad,
-                        Importee = importees
+                        Importee = importees,
+                        aggFecha = Fecha
                     });
                     CalcularTotal();
                 }
@@ -160,6 +202,7 @@ namespace CAJA
             }
         }
         string busqueda;
+        public DateTime Fecha;
         //C:\Users\010110\Desktop\SEMESTRE 4\Topicos avanzados de programacion\Unidad 2\CAJA\BaseDatos\DB_INVENTARIO_PRODUCTOS.xlsx
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
@@ -189,7 +232,7 @@ namespace CAJA
                             pU = fila[2].ToString();
                             cant = txtCant.Text;
                             unidad = fila[3].ToString();
-                            
+                            Fecha = DateTime.Now;
                             //Mostrar datos en stage 
                             txtDescr.Text = descricion;
                             txtUni.Text = "$"+pU+" p/u";
@@ -197,6 +240,45 @@ namespace CAJA
                     }
                 }
             }
+            ///////////////////////
+            void GenerarCortePorDia(DateTime fecha, out string reporte, out float totalGeneral)
+            {
+                totalGeneral = 0;
+                int totalVentas = 0;
+                int totalProductos = 0;
+
+                reporte = "===== CORTE DE CAJA =====\n";
+                reporte += "Fecha: " + fecha.ToShortDateString() + "\n\n";
+
+                foreach (var sesion in sesiones)
+                {
+                    float subtotal = 0;
+                    bool tieneVentasHoy = false;
+
+                    foreach (Registro r in sesion.Value)
+                    {
+                        if (r.aggFecha.Date == fecha.Date)
+                        {
+                            subtotal += float.Parse(r.Importee);
+                            totalProductos += int.Parse(r.Cantidaaad);
+                            tieneVentasHoy = true;
+                        }
+                    }
+
+                    if (tieneVentasHoy)
+                    {
+                        reporte += sesion.Key + " -> $" + subtotal.ToString("0.00") + "\n";
+                        totalGeneral += subtotal;
+                        totalVentas++;
+                    }
+                }
+
+                reporte += "\n----------------------\n";
+                reporte += "Ventas: " + totalVentas + "\n";
+                reporte += "Productos: " + totalProductos + "\n";
+                reporte += "TOTAL: $" + totalGeneral.ToString("0.00");
+            }
+
         }
         class Registro
         {
@@ -206,7 +288,11 @@ namespace CAJA
             public string Cantidaaad { get; set; }
             public string un { get; set; }
             public string Importee { get; set; }
+
+            public DateTime aggFecha { get; set; }
         }
+
+
 
     }
 }

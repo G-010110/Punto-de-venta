@@ -199,6 +199,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visitantee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visitantee.Designer.cs">
+      <DependentUpon>Visitantee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin.Designer.cs">
+      <DependentUpon>MenuAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="MPago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +240,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdmin.resx">
+      <DependentUpon>MenuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MPago.resx">
       <DependentUpon>MPago.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +264,9 @@
     </Compile>
     <EmbeddedResource Include="VentanaAdmin.resx">
       <DependentUpon>VentanaAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visitantee.resx">
+      <DependentUpon>Visitantee.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="BaseDatos\DB_INVENTARIO_PRODUCTOS.xlsx" />
     <None Include="packages.config" />

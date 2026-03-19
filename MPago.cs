@@ -43,6 +43,7 @@ namespace CAJA
         {
             this.f= f;
             InitializeComponent();
+            textTotal.Text = f.pasarTotal+"";
         }
 
         private void button1_Click(object sender, EventArgs e)
